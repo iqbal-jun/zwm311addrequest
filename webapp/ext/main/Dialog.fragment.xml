@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:macros="sap.fe.macros">
+	<Dialog id="Dialog1" title="Select Group Type">
+	                <VBox id="idSelectionContainer3">
+                    <RadioButtonGroup select=".onRadioSelect3"  id="idSelectionRadioGroup3" selectedIndex="0" >
+                        <RadioButton id="idOption1Radio3" text="{i18n>option1Text3}" tooltip="{i18n>option1Tooltip3}" selected="true"/>
+                        <RadioButton id="idOption2Radio3" text="{i18n>option2Text3}" tooltip="{i18n>option2Tooltip3}"/>
+						<RadioButton id="idOption3Radio3" text="{i18n>option3Text3}" tooltip="{i18n>option3Tooltip3}"/>
+						<RadioButton id="idOption4Radio3" text="{i18n>option4Text3}" tooltip="{i18n>option4Tooltip3}"/>
+                    </RadioButtonGroup>
+                </VBox>
+    <!--
+        <beginButton>
+            <Button id="CancelDialog" text="Cancel" press=".cancelDialog" type="Reject"/>
+        </beginButton>
+        -->
+		<endButton>
+			<Button id="CloseDialog" text="OK" press=".closeDialog" type="Emphasized"/><!-- -->
+		</endButton>
+
+	</Dialog>
+</core:FragmentDefinition>

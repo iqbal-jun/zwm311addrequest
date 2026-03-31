@@ -1,0 +1,37 @@
+<core:FragmentDefinition 
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+	<Dialog id="gridTableTypeDialog" title="Grid Table Configuration" class="sapUiSmallMargin" afterClose=".closeDialog">
+		<content>
+		  <form:SimpleForm editable="true" id="configForm">
+				<Label id="_IDGenLabel1" text="enableColumnFreeze"/>
+				<Switch id="enableColumnFreeze" state="{view>/gridType/enableColumnFreeze}" customTextOn=" " customTextOff=" " />
+
+				<Label id="_IDGenLabel2" text="fixedColumnCount"/>
+				<StepInput id="fixedColumnCount" value="{view>/gridType/fixedColumnCount}" />
+
+				<Label id="_IDGenLabel3" text="rowCount"/>
+				<StepInput id="rowCount" value="{view>/gridType/rowCount}" />
+
+				<Label id="_IDGenLabel4" text="rowCountMode (Auto | Fixed)"/>
+				<Input
+					id="rowCountMode"
+					showSuggestion="true"
+					value="{view>/gridType/rowCountMode}"
+					suggestionItems="{view>/enums/rowCountMode}">
+					<core:Item id="_IDGenItem" key="{view>name}" text="{view>name}"></core:Item>
+				</Input>
+
+				<Label id="_IDGenLabel5" text="scrollThreshold"/>
+				<StepInput id="scrollThreshold" value="{view>/gridType/scrollThreshold}" />
+
+				<Label id="_IDGenLabel6" text="selectionLimit"/>
+				<StepInput id="selectionLimit" value="{view>/gridType/selectionLimit}" />
+		  </form:SimpleForm>
+		</content>
+		<endButton>
+		  <Button id="btnClose" text="Close" press=".closeDialog" />
+		</endButton>
+	  </Dialog>
+</core:FragmentDefinition>
